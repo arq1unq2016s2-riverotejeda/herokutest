@@ -31,7 +31,8 @@
     "zone.js": "^0.6.25",
     "express": "3.3.5",
     "jade": "^1.0.4",
-     "ejs": "^1.0.0"
+     "ejs": "^1.0.0",
+     "serve-static": "^1.10.0"
   },
   "devDependencies": {
     "concurrently": "^3.0.0",
