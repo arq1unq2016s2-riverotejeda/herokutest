@@ -42,6 +42,9 @@
   },
   "packages": {
     "ng2-dropdown": { "main": "index.js", "defaultExtension": "js" }
+  },
+  "engines": {
+    "node": "4.1.1"
   }
 
 }
