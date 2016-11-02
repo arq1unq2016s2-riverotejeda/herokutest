@@ -17,7 +17,7 @@ app.set('view engine', 'jade');
 app.get('/', function(req, res) {
 
     // make sure index is in the right directory. In this case /app/index.html
-    res.render('index');
+    res.render('/app/index');
 	//res.render('/app/index.html');
 });
 
