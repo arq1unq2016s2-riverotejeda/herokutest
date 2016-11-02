@@ -4,30 +4,22 @@
 
 var express = require('express');
 var app = express();
-var connect = require('connect');
-var serveStatic = require('serve-static');
-connect().use(serveStatic(__dirname)).listen(8080, function(){
-    console.log('Server running on 8080...');
-});
-
-
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 8080;
 
-// make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/app'));
-app.set('view engine', 'jade');
-app.engine('html', require('ejs').renderFile);
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
+// make express look in the public directory for assets (css/js/img)
+app.use(express.static(__dirname + '/public'));
 
 // set the home page route
 app.get('/', function(req, res) {
 
-    // make sure index is in the right directory. In this case /app/index.html
-//    res.render('index');
-	res.render('/app/index.html');
+    // ejs render automatically looks in the views folder
+    res.render('index');
 });
 
 app.listen(port, function() {
