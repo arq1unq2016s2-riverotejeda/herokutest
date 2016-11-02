@@ -1,4 +1,4 @@
-/**
+k/**
  * Created by mtejeda on 31/10/16.
  */
 
@@ -9,17 +9,18 @@ var app = express();
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 8080;
 
-// set the view engine to ejs
-app.set('view engine', 'ejs');
-
 // make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/app'));
+app.set('view engine', 'jade');
+app.engine('html', require('ejs').renderFile);
+
 
 // set the home page route
 app.get('/', function(req, res) {
 
-    // ejs render automatically looks in the views folder
-    res.render('index');
+    // make sure index is in the right directory. In this case /app/index.html
+//    res.render('index');
+	res.render('/app/index.html');
 });
 
 app.listen(port, function() {
