@@ -2,9 +2,10 @@
   "name": "survey",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "start": "node main.js",
+  "test": "mocha",
+  "postinstall": "bower install && grunt build"
     "lite": "lite-server",
-    "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings"
