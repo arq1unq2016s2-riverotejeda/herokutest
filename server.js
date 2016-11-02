@@ -13,7 +13,7 @@ var port = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/app'));
 app.set('view engine', 'jade');
 app.engine('html', require('ejs').renderFile);
-app.get('*', routes.index);
+
 
 // set the home page route
 app.get('/', function(req, res) {
