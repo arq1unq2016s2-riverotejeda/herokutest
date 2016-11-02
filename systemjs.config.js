@@ -39,7 +39,8 @@
             'angular-in-memory-web-api': {
                 main: './index.js',
                 defaultExtension: 'js'
-            }
+            }, 
+	    'angulartics2': { main: 'index.js', defaultExtension: 'js' }
         },
 	"References": [
     { "Path": "node_modules/systemjs/dist/system.js" },
