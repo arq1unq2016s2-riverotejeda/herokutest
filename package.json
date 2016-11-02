@@ -46,7 +46,7 @@
     "ng2-dropdown": { "main": "index.js", "defaultExtension": "js" }
   },
   "engines": {
-    "node": "4.1.1"
+    "node": "6.7.0"
   }
 
 }
