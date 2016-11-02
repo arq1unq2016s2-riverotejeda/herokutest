@@ -40,6 +40,17 @@
                 main: './index.js',
                 defaultExtension: 'js'
             }
-        }
+        },
+	"References": [
+    { "Path": "node_modules/systemjs/dist/system.js" },
+    { "Path": "node_modules/es6-shim/es6-shim.js" },
+    { "Path": "node_modules/@angular/core/bundles/core.umd.js" },    
+    { "Path": "node_modules/systemjs/dist/system-polyfills.js" },
+    { "Path": "node_modules/rxjs/bundles/Rx.js" },
+    { "Path": "node_modules/typescript/lib/typescript.js" },
+    { "Path": "node_modules/zone.js/dist/zone.js" },
+    { "Path": "node_modules/reflect-metadata/Reflect.js" },
+    { "Path": "systemjs.config.js" }
+  ]
     });
 })(this);
